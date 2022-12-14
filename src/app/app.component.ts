@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blog';
-}
+  // @Input() visibleSidebar1 = false
+  // @Output() public visibleSidebar1 = new EventEmitter<boolean>();
+  // ngOnit(){
+  //   this.visibleSidebar1.emit('')
+  }
+
