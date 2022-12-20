@@ -19,6 +19,13 @@ import { CardModule } from 'primeng/card';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { RouterModule, Routes } from '@angular/router';
 import { DatePipe } from '@angular/common';
+
+import {
+  AngularFirestore,
+  AngularFirestoreCollection,
+} from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore/';
 import { PostsComponent } from './posts/posts.component';
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -45,6 +52,10 @@ const appRoutes: Routes = [
     FormsModule,
     SpeedDialModule,
     CardModule,
+    AngularFirestore,
+    AngularFirestoreCollection,
+    AngularFireModule,
+    AngularFirestoreModule,
     ReactiveFormsModule,
     EditorModule,
     InputTextModule,

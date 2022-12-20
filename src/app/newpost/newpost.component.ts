@@ -22,23 +22,16 @@ export class NewpostComponent {
     console.log(this.article);
   }
   Save() {
-    this.cleanarticle = this.article.replaceAll('<p>', '&&');
-    this.cleanarticle = this.cleanarticle.replace(/<\/?[^>]+(>|$)/g, '');
-    this.articlePara = this.cleanarticle.split('&&').filter((el) => el != '');
-    console.log('Article para', this.articlePara);
     this.timestamp = Date.now();
     let currenttime = this.datepipe.transform(
       this.timestamp,
       'MMM d, y, h:mm a'
     );
-    console.log(this.article);
     this.articles.push({
       title: this.title,
-      article: this.articlePara,
+      article: this.article,
       time: currenttime,
     });
-    console.log(currenttime);
-    console.log('Articles', this.articles);
     localStorage.setItem('posts', JSON.stringify(this.articles));
   }
 }

@@ -11,7 +11,8 @@
     <ng-template pTemplate="header">
         <!-- <img alt="Card" src="assets/usercard.png"> -->
     </ng-template>
-    {{trim}}
+    <!-- {{trim}} -->
+    <div [innerHTML]="post.article"></div>
     <!-- <p *ngFor="let para of post.article; let i = index;">{{para}}</p> -->
     
 </p-card>
